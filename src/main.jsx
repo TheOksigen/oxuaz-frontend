@@ -5,7 +5,6 @@ import { createRouter, RouterProvider } from '@tanstack/react-router'
 import { routeTree } from './routeTree.gen'
 import { Toaster } from './components/ui/sonner'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { Analytics } from "@vercel/analytics/next"
 
 const queryClient = new QueryClient()
 const router = createRouter({ routeTree })
@@ -16,6 +15,6 @@ createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
     <ReactQueryDevtools initialIsOpen={false} />
     <Toaster />
-    <Analytics/>
+
   </QueryClientProvider>
 )
